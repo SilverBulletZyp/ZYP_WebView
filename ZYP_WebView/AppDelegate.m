@@ -17,6 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSArray *array = @[@{@"name":@"Test VC1",@"vc":@"VC_01"},
+                       @{@"name":@"Test VC2",@"vc":@"VC_02"},];
+    ZYPNavigationController *nav = [[ZYPNavigationController alloc]initWithTitle:@"WebView" vcArray:array];
+    self.window.rootViewController = nav;
     return YES;
 }
 

@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26492ECE1FB1A1E800FEC23B /* VC_01.m in Sources */ = {isa = PBXBuildFile; fileRef = 26492ECD1FB1A1E800FEC23B /* VC_01.m */; };
+		26492ED11FB1A1F200FEC23B /* VC_02.m in Sources */ = {isa = PBXBuildFile; fileRef = 26492ED01FB1A1F200FEC23B /* VC_02.m */; };
 		266335D91FB19C68006ABF1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 266335D81FB19C68006ABF1C /* AppDelegate.m */; };
 		266335DC1FB19C68006ABF1C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 266335DB1FB19C68006ABF1C /* ViewController.m */; };
 		266335DF1FB19C68006ABF1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 266335DD1FB19C68006ABF1C /* Main.storyboard */; };
 		266335E11FB19C68006ABF1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 266335E01FB19C68006ABF1C /* Assets.xcassets */; };
 		266335E41FB19C68006ABF1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 266335E21FB19C68006ABF1C /* LaunchScreen.storyboard */; };
 		266335E71FB19C68006ABF1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 266335E61FB19C68006ABF1C /* main.m */; };
+		7BD2D533E882649E6834C9EB /* libPods-ZYP_WebView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8377B0F010677D19ABA9E6D4 /* libPods-ZYP_WebView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26492EC21FB19F6800FEC23B /* ZYP_WebView.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYP_WebView.pch; sourceTree = "<group>"; };
+		26492ECC1FB1A1E800FEC23B /* VC_01.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VC_01.h; sourceTree = "<group>"; };
+		26492ECD1FB1A1E800FEC23B /* VC_01.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VC_01.m; sourceTree = "<group>"; };
+		26492ECF1FB1A1F200FEC23B /* VC_02.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VC_02.h; sourceTree = "<group>"; };
+		26492ED01FB1A1F200FEC23B /* VC_02.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VC_02.m; sourceTree = "<group>"; };
 		266335D41FB19C68006ABF1C /* ZYP_WebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYP_WebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		266335D71FB19C68006ABF1C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		266335D81FB19C68006ABF1C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +34,9 @@
 		266335E31FB19C68006ABF1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		266335E51FB19C68006ABF1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		266335E61FB19C68006ABF1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8377B0F010677D19ABA9E6D4 /* libPods-ZYP_WebView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZYP_WebView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91A3531AAA444EFFBCB5DA45 /* Pods-ZYP_WebView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYP_WebView.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYP_WebView/Pods-ZYP_WebView.release.xcconfig"; sourceTree = "<group>"; };
+		D96ECF19D1B5DF4EC488AAA6 /* Pods-ZYP_WebView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYP_WebView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYP_WebView/Pods-ZYP_WebView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +44,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD2D533E882649E6834C9EB /* libPods-ZYP_WebView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26492EC31FB19FC800FEC23B /* VC_03 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VC_03;
+			sourceTree = "<group>";
+		};
+		26492EC41FB19FC800FEC23B /* VC_01 */ = {
+			isa = PBXGroup;
+			children = (
+				26492ECC1FB1A1E800FEC23B /* VC_01.h */,
+				26492ECD1FB1A1E800FEC23B /* VC_01.m */,
+			);
+			path = VC_01;
+			sourceTree = "<group>";
+		};
+		26492EC51FB19FC800FEC23B /* VC_02 */ = {
+			isa = PBXGroup;
+			children = (
+				26492ECF1FB1A1F200FEC23B /* VC_02.h */,
+				26492ED01FB1A1F200FEC23B /* VC_02.m */,
+			);
+			path = VC_02;
+			sourceTree = "<group>";
+		};
 		266335CB1FB19C68006ABF1C = {
 			isa = PBXGroup;
 			children = (
 				266335D61FB19C68006ABF1C /* ZYP_WebView */,
 				266335D51FB19C68006ABF1C /* Products */,
+				930E8297793236AE1C1F48AF /* Pods */,
+				4F9409CABA82109AF5EDA3CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +101,10 @@
 				266335D81FB19C68006ABF1C /* AppDelegate.m */,
 				266335DA1FB19C68006ABF1C /* ViewController.h */,
 				266335DB1FB19C68006ABF1C /* ViewController.m */,
+				26492EC21FB19F6800FEC23B /* ZYP_WebView.pch */,
+				26492EC41FB19FC800FEC23B /* VC_01 */,
+				26492EC51FB19FC800FEC23B /* VC_02 */,
+				26492EC31FB19FC800FEC23B /* VC_03 */,
 				266335DD1FB19C68006ABF1C /* Main.storyboard */,
 				266335E01FB19C68006ABF1C /* Assets.xcassets */,
 				266335E21FB19C68006ABF1C /* LaunchScreen.storyboard */,
@@ -71,6 +114,23 @@
 			path = ZYP_WebView;
 			sourceTree = "<group>";
 		};
+		4F9409CABA82109AF5EDA3CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8377B0F010677D19ABA9E6D4 /* libPods-ZYP_WebView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		930E8297793236AE1C1F48AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D96ECF19D1B5DF4EC488AAA6 /* Pods-ZYP_WebView.debug.xcconfig */,
+				91A3531AAA444EFFBCB5DA45 /* Pods-ZYP_WebView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 266335EA1FB19C68006ABF1C /* Build configuration list for PBXNativeTarget "ZYP_WebView" */;
 			buildPhases = (
+				7A93BEB83E67EF66199FF719 /* [CP] Check Pods Manifest.lock */,
 				266335D01FB19C68006ABF1C /* Sources */,
 				266335D11FB19C68006ABF1C /* Frameworks */,
 				266335D21FB19C68006ABF1C /* Resources */,
+				C29A4EE4F44388DD4BA2C8EB /* [CP] Embed Pods Frameworks */,
+				FDCEC3A796FEAC0553DEB506 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,6 +200,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7A93BEB83E67EF66199FF719 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C29A4EE4F44388DD4BA2C8EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYP_WebView/Pods-ZYP_WebView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDCEC3A796FEAC0553DEB506 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYP_WebView/Pods-ZYP_WebView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		266335D01FB19C68006ABF1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -144,7 +255,9 @@
 			files = (
 				266335DC1FB19C68006ABF1C /* ViewController.m in Sources */,
 				266335E71FB19C68006ABF1C /* main.m in Sources */,
+				26492ED11FB1A1F200FEC23B /* VC_02.m in Sources */,
 				266335D91FB19C68006ABF1C /* AppDelegate.m in Sources */,
+				26492ECE1FB1A1E800FEC23B /* VC_01.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,10 +389,12 @@
 		};
 		266335EB1FB19C68006ABF1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D96ECF19D1B5DF4EC488AAA6 /* Pods-ZYP_WebView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K7NEJ69CTA;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZYP_WebView/ZYP_WebView.pch";
 				INFOPLIST_FILE = ZYP_WebView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.huomao.test.payment.ZYP-WebView";
@@ -290,10 +405,12 @@
 		};
 		266335EC1FB19C68006ABF1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91A3531AAA444EFFBCB5DA45 /* Pods-ZYP_WebView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K7NEJ69CTA;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZYP_WebView/ZYP_WebView.pch";
 				INFOPLIST_FILE = ZYP_WebView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.huomao.test.payment.ZYP-WebView";
