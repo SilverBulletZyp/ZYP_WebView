@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <div style="font-size:100px;background-color:#FFD700;height:200px;" onclick="test()">gotoLogin</div>
+        <div style="font-size:100px;background-color:#FFD700;height:200px;" onclick="test2()">gotoLivePlayerRoom</div>
+        <div style="font-size:100px;background-color:#FFD700;height:200px;" onclick="test3()">gotoChongZhi</div>
+        <div style="font-size:100px;background-color:#FFD700;height:200px;" onclick="test4()">gotoMobilePhoneBinding</div>
+    </body>
+    <script>
+        function test() {
+            gotoLogin({"mytest":"gotoLogin"},function(result){
+                      alert(result["uid"]);
+                      });
+        }
+        function test2() {
+            gotoLivePlayerRoom({"type":2,"screenType":1,"cid":6191},function(result){
+                               alert(result["uid"]);
+                               });
+        }
+        function test3() {
+            gotoChongZhi({"mytest3":"gotoChongZhi"},function(result){
+                         alert(result["uid"]);
+                         });
+        }
+        function test4() {
+            gotoMobilePhoneBinding({"mytest4":"gotoMobilePhoneBinding"},function(result){
+                                   alert(result["uid"]);
+                                   });
+        }
+    
+        </script>
+</html>

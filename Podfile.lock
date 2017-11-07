@@ -1,15 +1,18 @@
 PODS:
+  - KVOController (1.2.0)
   - Masonry (1.0.2)
   - ZYP_HomeViewController (1.0.5)
 
 DEPENDENCIES:
+  - KVOController
   - Masonry
   - ZYP_HomeViewController (= 1.0.5)
 
 SPEC CHECKSUMS:
+  KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   ZYP_HomeViewController: f4d8d47efc06c93a6518e180bd6f420224020c44
 
-PODFILE CHECKSUM: c172b9c5ba4e36d8a0444002b5899d3c1acee6d6
+PODFILE CHECKSUM: 43400365874e65d1439cd322fbd7fb1dd0120893
 
 COCOAPODS: 1.2.1.beta.1

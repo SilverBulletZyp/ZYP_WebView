@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		26492ECE1FB1A1E800FEC23B /* VC_01.m in Sources */ = {isa = PBXBuildFile; fileRef = 26492ECD1FB1A1E800FEC23B /* VC_01.m */; };
 		26492ED11FB1A1F200FEC23B /* VC_02.m in Sources */ = {isa = PBXBuildFile; fileRef = 26492ED01FB1A1F200FEC23B /* VC_02.m */; };
+		26492ED51FB1A96200FEC23B /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26492ED41FB1A96200FEC23B /* TestVC.m */; };
+		26492ED71FB1AA5100FEC23B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26492ED61FB1AA3200FEC23B /* WebKit.framework */; };
+		26492ED91FB1AE7100FEC23B /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 26492ED81FB1AE7100FEC23B /* test.html */; };
 		266335D91FB19C68006ABF1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 266335D81FB19C68006ABF1C /* AppDelegate.m */; };
 		266335DC1FB19C68006ABF1C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 266335DB1FB19C68006ABF1C /* ViewController.m */; };
 		266335DF1FB19C68006ABF1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 266335DD1FB19C68006ABF1C /* Main.storyboard */; };
@@ -24,6 +27,10 @@
 		26492ECD1FB1A1E800FEC23B /* VC_01.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VC_01.m; sourceTree = "<group>"; };
 		26492ECF1FB1A1F200FEC23B /* VC_02.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VC_02.h; sourceTree = "<group>"; };
 		26492ED01FB1A1F200FEC23B /* VC_02.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VC_02.m; sourceTree = "<group>"; };
+		26492ED31FB1A96200FEC23B /* TestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
+		26492ED41FB1A96200FEC23B /* TestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
+		26492ED61FB1AA3200FEC23B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		26492ED81FB1AE7100FEC23B /* test.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		266335D41FB19C68006ABF1C /* ZYP_WebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYP_WebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		266335D71FB19C68006ABF1C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		266335D81FB19C68006ABF1C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26492ED71FB1AA5100FEC23B /* WebKit.framework in Frameworks */,
 				7BD2D533E882649E6834C9EB /* libPods-ZYP_WebView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +84,15 @@
 			path = VC_02;
 			sourceTree = "<group>";
 		};
+		26492ED21FB1A94D00FEC23B /* VC_other */ = {
+			isa = PBXGroup;
+			children = (
+				26492ED31FB1A96200FEC23B /* TestVC.h */,
+				26492ED41FB1A96200FEC23B /* TestVC.m */,
+			);
+			path = VC_other;
+			sourceTree = "<group>";
+		};
 		266335CB1FB19C68006ABF1C = {
 			isa = PBXGroup;
 			children = (
@@ -102,9 +119,11 @@
 				266335DA1FB19C68006ABF1C /* ViewController.h */,
 				266335DB1FB19C68006ABF1C /* ViewController.m */,
 				26492EC21FB19F6800FEC23B /* ZYP_WebView.pch */,
+				26492ED81FB1AE7100FEC23B /* test.html */,
 				26492EC41FB19FC800FEC23B /* VC_01 */,
 				26492EC51FB19FC800FEC23B /* VC_02 */,
 				26492EC31FB19FC800FEC23B /* VC_03 */,
+				26492ED21FB1A94D00FEC23B /* VC_other */,
 				266335DD1FB19C68006ABF1C /* Main.storyboard */,
 				266335E01FB19C68006ABF1C /* Assets.xcassets */,
 				266335E21FB19C68006ABF1C /* LaunchScreen.storyboard */,
@@ -117,6 +136,7 @@
 		4F9409CABA82109AF5EDA3CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				26492ED61FB1AA3200FEC23B /* WebKit.framework */,
 				8377B0F010677D19ABA9E6D4 /* libPods-ZYP_WebView.a */,
 			);
 			name = Frameworks;
@@ -192,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26492ED91FB1AE7100FEC23B /* test.html in Resources */,
 				266335E41FB19C68006ABF1C /* LaunchScreen.storyboard in Resources */,
 				266335E11FB19C68006ABF1C /* Assets.xcassets in Resources */,
 				266335DF1FB19C68006ABF1C /* Main.storyboard in Resources */,
@@ -253,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26492ED51FB1A96200FEC23B /* TestVC.m in Sources */,
 				266335DC1FB19C68006ABF1C /* ViewController.m in Sources */,
 				266335E71FB19C68006ABF1C /* main.m in Sources */,
 				26492ED11FB1A1F200FEC23B /* VC_02.m in Sources */,

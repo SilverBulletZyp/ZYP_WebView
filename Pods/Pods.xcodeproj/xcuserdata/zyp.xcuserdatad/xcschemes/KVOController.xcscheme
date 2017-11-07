@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BDBA8DC09E577CC1925C515DBAF4E83B'
-               BlueprintName = 'Pods-ZYP_WebView'
+               BlueprintIdentifier = '9C2D3327264C1DB785EADD89D3242323'
+               BlueprintName = 'KVOController'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-ZYP_WebView.a'>
+               BuildableName = 'libKVOController.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

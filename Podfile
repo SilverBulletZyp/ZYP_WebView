@@ -27,7 +27,7 @@ pod 'Masonry' # 轻量级布局框架
 # pod 'AFNetworking', '~> 3.1.0' # AFN网络请求库
 
 ## Others ##
-# pod 'KVOController' # KVO监听
+ pod 'KVOController' # KVO监听
 
 ## Debug ##
 # pod 'CocoaLumberjack' # DDLog

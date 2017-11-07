@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '2CA0D680A93F8740B1B842A47060E8D1'
+               BlueprintIdentifier = '40FFBA23806933EA365072E51A656A8F'
                BlueprintName = 'ZYP_HomeViewController'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libZYP_HomeViewController.a'>

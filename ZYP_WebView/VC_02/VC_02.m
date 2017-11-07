@@ -7,31 +7,84 @@
 //
 
 #import "VC_02.h"
+#import <WebKit/WebKit.h>
 
-@interface VC_02 ()
 
+@interface VC_02 () <WKNavigationDelegate,WKUIDelegate>
+@property (nonatomic, strong) WKWebView *wk;
 @end
 
 @implementation VC_02
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // 默认配置
+    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc]init];
+    
+    // 默认偏好
+    config.preferences = [[WKPreferences alloc]init];
+    config.preferences.minimumFontSize = 10;
+    config.preferences.javaScriptEnabled = YES;
+    config.preferences.javaScriptCanOpenWindowsAutomatically = NO; // 默认no不能自动通过窗口打开
+    
+    // web内容池
+    config.processPool = [[WKProcessPool alloc]init];
+    
+    
+    
+    // 创建
+    self.wk = [[WKWebView alloc]initWithFrame:CGRectZero configuration:config];
+    self.wk.scrollView.backgroundColor = [UIColor redColor];
+    self.wk.navigationDelegate = self; // 导航代理
+    self.wk.UIDelegate = self;         // webview UI交互代理
+    [self.view addSubview:self.wk];
+    [self.wk mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view);
+        make.top.equalTo(self.view).offset(120);
+    }];
+    
+    [self.wk addObserver:self
+              forKeyPath:@"loading"
+                 options:NSKeyValueObservingOptionNew
+                 context:nil];
+    [self.wk addObserver:self
+              forKeyPath:@"title"
+                 options:NSKeyValueObservingOptionNew
+                 context:nil];
+    [self.wk addObserver:self
+              forKeyPath:@"estimatedProgress"
+                 options:NSKeyValueObservingOptionNew
+                 context:nil];
+    
+    
+    // load
+    NSURL *path = [[NSBundle mainBundle]URLForResource:@"test" withExtension:@"html"];
+    [self.wk loadRequest:[NSURLRequest requestWithURL:path]];
+    
+    
+    
+    
+    NSLog(@"123");// po [[self view] recursiveDescription]
+    
+    /*
+     
+     [[UIWindow keyWindow] recursiveDescription] // 检查视图层级结构
+     [[[UIWindow keyWindow] rootViewController] _printHierarchy] // 检查视图控制器
+     
+     <UIView: 0x7fd0d9204e10; frame = (0 0; 375 667); autoresize = W+H; layer = <CALayer: 0x60400003ce80>>
+     | <WKWebView: 0x7fd0d7806e00; frame = (0 0; 0 0); layer = <CALayer: 0x6080002226a0>>
+     |    | <WKScrollView: 0x7fd0d784f800; baseClass = UIScrollView; frame = (0 0; 0 0); clipsToBounds = YES; gestureRecognizers = <NSArray: 0x608000243a50>; layer = <CALayer: 0x6080002219c0>; contentOffset: {0, 0}; contentSize: {0, 0}; adjustedContentInset: {0, 0, 0, 0}>
+     |    |    | <WKContentView: 0x7fd0d7855600; frame = (0 0; 0 0); gestureRecognizers = <NSArray: 0x60000044db60>; layer = <CALayer: 0x608000222240>>
+     |    |    |    | <UIView: 0x7fd0d640e9e0; frame = (0 0; 0 0); clipsToBounds = YES; layer = <CALayer: 0x600000430960>>
+     |    |    |    |    | <UIView: 0x7fd0d6429e60; frame = (0 0; 0 0); autoresize = W+H; layer = <CALayer: 0x60000042f6a0>>
+     |    |    | <UIView: 0x7fd0d642a270; frame = (0 0; 0 0); opaque = NO; layer = <CALayer: 0x600000430f40>>
+     
+     
+     */
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
