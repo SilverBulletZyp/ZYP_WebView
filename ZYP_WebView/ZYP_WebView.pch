@@ -19,6 +19,7 @@
 //#define MAS_SHORTHAND
 //#define MAS_SHORTHAND_GLOBALS
 #import "Masonry.h"
+#import "KVOController.h"
 
 //#import "iConsole.h"
 

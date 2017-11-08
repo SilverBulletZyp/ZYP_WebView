@@ -1,4 +1,9 @@
+<!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>测试标题</title>
+    </head>
     <body>
         <div style="font-size:100px;background-color:#FFD700;height:200px;" onclick="test()">gotoLogin</div>
         <div style="font-size:100px;background-color:#FFD700;height:200px;" onclick="test2()">gotoLivePlayerRoom</div>
@@ -6,6 +11,9 @@
         <div style="font-size:100px;background-color:#FFD700;height:200px;" onclick="test4()">gotoMobilePhoneBinding</div>
     </body>
     <script>
+        function test0() {
+            alert(7);
+        }
         function test() {
             gotoLogin({"mytest":"gotoLogin"},function(result){
                       alert(result["uid"]);
@@ -27,5 +35,5 @@
                                    });
         }
     
-        </script>
+    </script>
 </html>

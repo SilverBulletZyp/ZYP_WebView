@@ -12,6 +12,7 @@
 
 @interface VC_02 () <WKNavigationDelegate,WKUIDelegate>
 @property (nonatomic, strong) WKWebView *wk;
+@property (nonatomic, strong) FBKVOController *kvo;
 @end
 
 @implementation VC_02
@@ -44,18 +45,8 @@
         make.top.equalTo(self.view).offset(120);
     }];
     
-    [self.wk addObserver:self
-              forKeyPath:@"loading"
-                 options:NSKeyValueObservingOptionNew
-                 context:nil];
-    [self.wk addObserver:self
-              forKeyPath:@"title"
-                 options:NSKeyValueObservingOptionNew
-                 context:nil];
-    [self.wk addObserver:self
-              forKeyPath:@"estimatedProgress"
-                 options:NSKeyValueObservingOptionNew
-                 context:nil];
+   
+
     
     
     // load
@@ -82,6 +73,43 @@
      
      
      */
+ 
+    
+    
+    
+    // 监听
+    self.kvo = [FBKVOController controllerWithObserver:self];
+    
+    
+    __weak __typeof(self)weakSelf = self;
+    [self.kvo observe:self.wk keyPath:@"loading"
+              options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew
+                block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change)
+     {
+         __strong __typeof(weakSelf)strongSelf =  weakSelf;
+         NSLog(@"change = %@",change);
+         NSString *str = [NSString stringWithFormat:@"%@",[change objectForKey:@"new"]];
+         if (!strongSelf.wk.loading) {//[str isEqualToString:@"0"]
+             [strongSelf.wk evaluateJavaScript:@"test0()" completionHandler:^(id _Nullable response, NSError * _Nullable error) {
+                 NSLog(@"3333333");
+             }];
+         }
+     }];
+    
+    [self.kvo observe:self.wk keyPath:@"title"
+              options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew
+                block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change)
+     {
+         NSLog(@"change = %@",change);
+     }];
+    
+    [self.kvo observe:self.wk keyPath:@"estimatedProgress"
+              options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew
+                block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change)
+     {
+         NSLog(@"change = %@",change);
+         
+     }];
     
 }
 
